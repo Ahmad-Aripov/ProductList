@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: #000; /* цвет фона карточки */
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px 30px; /* добавляем больший отступ справа и слева, чем сверху и снизу */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%; /* или оставьте auto, чтобы ширина автоматически подстраивалась под содержимое */
+}
+
+
+.card h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container > * {
+    margin-bottom: 10px; /* Отступ между элементами */
+}
+.edit-link {
+    display: inline-block;
+}
+
+.edit-button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-link {
+    display: inline-block;
+}
+
+.delete-button {
+    padding: 8px 16px;
+    background-color: #ff3333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #cc0000; /* Более темный оттенок красного при наведении */
+}

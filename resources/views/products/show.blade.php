@@ -24,10 +24,16 @@
             @endforeach
         @endif
         <div class="edit-link">
-            <a href="{{route('product.edit', $product->id)}}" class="edit-button">Изменить</a>
+            <form action="{{route('product.edit', $product->id)}}" method="GET">
+                <input type="submit" value="Изменить" class="edit-button">
+            </form>
         </div>
         <div class="delete-link">
-            <a href="{{route('product.create')}}" class="delete-button">Удалить</a>
+            <form action="{{route('product.destroy', $product->id)}}" method="POST">
+                @csrf
+                @method('delete')
+                <input type="submit" value="Удалить" class="delete-button">
+            </form>
         </div>
 
     </div>

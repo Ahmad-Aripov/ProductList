@@ -44,12 +44,14 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'article' => 'required|string|alpha_num|unique:products',
+            'article' => 'required|string|alpha_num|unique:products,article,'.$id,
             'name' => 'required|string|min:10',
-            'status' => 'required|in:Доступен,Не доступен',
+            'status' => 'required',
         ]);
-        $product = Product::find($id);
+
+        $product = Product::findOrFail($id);
         $product->update($request->all());
+
         return redirect()->route('product.index');
     }
     public function destroy (Product $product)

@@ -5,8 +5,8 @@ document.getElementById('addCharacteristic').addEventListener('click', function(
     var characteristic = document.createElement('div');
     characteristic.classList.add('characteristic');
     characteristic.innerHTML = `
-        <input type="text" name="characteristic_name[]" placeholder="Название характеристики">
-        <input type="text" name="characteristic_value[]" placeholder="Значение характеристики">
+        <input type="text" name="data" placeholder="Название характеристики">
+        <input type="text" name="data" placeholder="Значение характеристики">
         <a href="#" class="removeCharacteristic">Удалить</a>
     `;
 

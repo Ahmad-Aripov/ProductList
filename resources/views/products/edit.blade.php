@@ -21,20 +21,9 @@
 
         <label for="status">Статус</label>
         <select id="status" name="status">
-            @php
-            if($product->status == "Доступен"){
-            @endphp
-                <option value="Доступен" selected>Доступен</option>
-                <option value="Не доступен">Не доступен</option>
-            @php
-            }
-            else {
-            @endphp
-                <option value="Доступен">Доступен</option>
-                <option value="Не доступен" selected>Не доступен</option>
-            @php
-            }
-            @endphp
+            <option value="Доступен">Доступен</option>
+            <option value="Не доступен" {{$product->status=='Не доступен'? 'selected':'null'}} >Не доступен</option>
+
         </select>
 
         <h3>Атрибуты</h3>
@@ -43,11 +32,11 @@
         <div class="container">
             <a href="#" id="addCharacteristic">+Добавить атрибут</a>
         </div>
+        <script src="{{asset('dist/js/edit.js')}}"></script>
 
         <button type="submit">Изменить товар</button>
 
     </form>
 </div>
-<script src="{{asset('dist/js/edit.js')}}"></script>
 </body>
 </html>
